@@ -28,6 +28,30 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "GET from EB URL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{EB_URL}}/filteredimage?image_url=https://upload.wikimedia.org/wikipedia/commons/b/bd/Golden_tabby_and_white_kitten_n01.jpg",
+					"protocol": "http",
+					"host": [
+						"{{EB_URL}}"
+					],
+					"path": [
+						"filteredimage"
+					],
+					"query": [
+						{
+							"key": "image_url",
+							"value": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Golden_tabby_and_white_kitten_n01.jpg"
+						}
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"event": [
@@ -54,13 +78,18 @@
 		{
 			"key": "HOST",
 			"value": "localhost:8082",
-			"type": "string",
-			"disabled": true
+			"type": "string"
 		},
 		{
-			"key": "HOST",
+			"key": "EB_URL",
 			"value": "udagram-server-env.eba-2fhzmj7d.us-east-1.elasticbeanstalk.com",
 			"type": "default"
+		},
+		{
+			"key": "EB_",
+			"value": "",
+			"type": "default",
+			"disabled": true
 		}
 	]
 }
